@@ -3,3 +3,12 @@
 Build: docker build -t iperf .
 
 Run: docker run -dp 5201:5201 iperf
+
+#
+# Install docker-engine on Linux distros
+https://docs.docker.com/engine/install/ubuntu/
+https://docs.docker.com/engine/install/fedora/
+https://docs.docker.com/engine/install/centos/
+
+# Linux post-installation for docker-engine
+https://docs.docker.com/engine/install/linux-postinstall/
