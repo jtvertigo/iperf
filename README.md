@@ -1,4 +1,4 @@
-# Simple iperf3 project
+# Simple iperf3 project for Docker Hub
 
 Build: docker build -t iperf .
 
