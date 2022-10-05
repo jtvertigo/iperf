@@ -48,7 +48,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          tags: ghcr.io/${{ github.repository_owner }}/iperf:lastest
+          tags: ghcr.io/${{ github.repository_owner }}/iperf:latest
           
       - name: Set up Docker Buildx
         id: buildx
