@@ -4,11 +4,7 @@ name: CI to Github Registry
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
-  #push:
-  #  tags:
-  #   - "v*.*.*"
-  pull_request:
+  push:
     branches: [ "master" ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -48,7 +44,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          #tags: ghcr.io/${{ github.repository_owner }}/iperf:latest
           
       - name: Set up Docker Buildx
         id: buildx
