@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI to Docker Hub
+name: CI to Github Registry
 
 # Controls when the workflow will run
 on:
@@ -48,6 +48,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+          tags: ghcr.io/${{ github.repository_owner }}/iperf:lastest
           
       - name: Set up Docker Buildx
         id: buildx
@@ -67,17 +68,3 @@ jobs:
           
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-
-      
-      
-      
-
-      # Runs a single command using the runners shell
-      #- name: Run a one-line script
-      #  run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      #- name: Run a multi-line script
-      #  run: |
-      #    echo Add other actions to build,
-      #    echo test, and deploy your project.
